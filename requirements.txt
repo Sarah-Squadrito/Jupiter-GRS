@@ -2,7 +2,10 @@ astropy
 black
 cmakelang
 cpplint
+cython
 netcdf4
 numpy
 pre-commit
+ruamel.yaml
+scons
 tqdm
