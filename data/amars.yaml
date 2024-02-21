@@ -1,0 +1,106 @@
+name: ancient mars radtran atmospheric file
+
+opacity-sources:
+  - name: H2S
+    class: Hitran
+    long-name: "Hydrogen sulfide line absorption"
+    model: Voigt
+
+  - name: SO2
+    class: Hitran
+    long-name: "Sulfur dioxide line absorption"
+    model: Voigt
+
+  - name: CO2
+    class: Hitran
+    long-name: "Carbon dioxide line absorption"
+    model: Voigt
+
+  - name: H2O
+    class: Hitran
+    long-name: "Water line absorption"
+    model: Voigt
+
+bands: [b1,b2,b3,b4,b5,b6,b7,b8]
+
+b1:
+  units: cm-1
+  grid-type: regular
+  wavenumber-range: [1., 200.]
+  resolution: 1
+  opacity: [CO2,H2S,SO2,H2O]
+  rt-solver: Disort
+
+b2:
+  units: cm-1
+  grid-type: regular
+  wavenumber-range: [201., 490.]
+  resolution: 1
+  opacity: [CO2,H2S,SO2,H2O]
+  rt-solver: Disort
+
+b3:
+  units: cm-1
+  grid-type: regular
+  wavenumber-range: [491., 800.]
+  resolution: 1
+  opacity: [CO2,H2S,SO2,H2O]
+  rt-solver: Disort
+
+b4:
+  units: cm-1
+  grid-type: regular
+  wavenumber-range: [801., 1100.]
+  resolution: 1
+  opacity: [CO2,H2S,SO2,H2O]
+  rt-solver: Disort
+
+b5:
+  units: cm-1
+  grid-type: regular
+  wavenumber-range: [1101., 1400.]
+  resolution: 1
+  opacity: [CO2,H2S,SO2,H2O]
+  rt-solver: Disort
+
+b6:
+  units: cm-1
+  grid-type: regular
+  wavenumber-range: [1401., 2250.]
+  resolution: 1
+  opacity: [CO2,H2S,SO2,H2O]
+  rt-solver: Disort
+
+b7:
+  units: cm-1
+  grid-type: regular
+  wavenumber-range: [2251., 2500.]
+  resolution: 1
+  opacity: [CO2,H2S,SO2,H2O]
+  rt-solver: Disort
+
+b8:
+  units: cm-1
+  grid-type: regular
+  wavenumber-range: [2501., 3000.]
+  resolution: 1
+  opacity: [CO2,H2S,SO2,H2O]
+  rt-solver: Disort
+
+Disort-flags:
+  ibcnd: false
+  usrtau: false
+  usrang: false
+  lamber: true
+  onlyfl: true
+  spher: false
+  intensity_correction: true
+  old_intensity_correction: false
+  general_source: false
+  output_uum: false
+  quiet: true
+  print-input: false
+  print-fluxes: false
+  print-intensity: false
+  print-transmissivity: false
+  print-phase-function: true

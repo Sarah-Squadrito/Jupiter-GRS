@@ -46,6 +46,7 @@ void RadiationBand::SetSpectralProperties(AirColumn& ac, Real const* x1f,
       for (int m = 0; m < nspec; ++m) {
         auto& spec = pgrid_->spec[m];
         Real kcoeff = a->GetAttenuation(spec.wav1, spec.wav2, air);  // 1/m
+        // Real kcoeff = 5;
         Real dssalb =
             a->GetSingleScatteringAlbedo(spec.wav1, spec.wav2, air) * kcoeff;
         // tau
